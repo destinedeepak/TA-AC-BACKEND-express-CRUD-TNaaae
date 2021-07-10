@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Document</title>
+</head>
+<body>
+   <section>
+       <h1>Enter a new user</h1>
+    <form action="/users" method="POST">
+        <input type="text" name="name" placeholder="name" class="formEntry">
+        <input type="email" name="email" placeholder="email" class="formEntry">
+        <input type="number" name="age" placeholder="age" class="formEntry">
+        <input type="text" name="address" placeholder="address" class="formEntry">
+        <input type="text" name="bio" placeholder="bio" class="formEntry">
+        <input type="text" name="hobbies" placeholder="add your hobbies in comma-separated" class="formEntry">
+        <input class="button" type="submit" value="Send">
+    </form>
+    <div class="back">
+        <a href="/users" class="button btn">Back to users</a>
+    </div>
+   </section>
+</body>
+</html>
