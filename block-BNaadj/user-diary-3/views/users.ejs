@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>List of users</h1>
+    </header>
+    <main>
+      <section class="users">
+        <%users.forEach(ele=>{%>
+        <div class="each-user">
+          <a href="/users/<%=ele.id%>" class="btn"><%=ele.name%></a>
+          <p><%=ele.bio.substr(0,15)+"..."%></p>
+        </div>
+        <%})%>
+        <a href="/users/new" class="new-btn">Add new user</a>
+      </section>
+    </main>
+  </body>
+</html>
