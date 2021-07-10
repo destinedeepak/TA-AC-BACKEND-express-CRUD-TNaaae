@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>User details</h1>
+    </header>
+    <main>
+      <section class="users">
+        <div class="each-user user">
+          <h2><small>Name:</small> <%=user.name%></h2>
+          <h3><small>Email:</small> <%=user.email%></h3>
+          <h4><small>Age:</small> <%=user.age%></h4>
+          <h4><small>Address:</small> <%=user.address%></h4>
+          <h4><small>Bio:</small> <%=user.bio%></h4>
+          <small>Hobbies: </small>
+          <%user.hobbies.forEach((ele,i,arr)=>{%>
+            <span><%=ele%></span>
+            <%if(i<arr.length-1){%>
+              <span>,</span>
+            <%}%>
+          <%})%><br>
+          <a href="/users/<%=user.id%>/edit" class="btn">Edit</a>
+          <a href="/users/<%=user.id%>/delete" class="btn">Delete</a>
+          <a href="/users" class="btn">All Users</a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

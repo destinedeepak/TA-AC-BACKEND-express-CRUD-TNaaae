@@ -35,7 +35,7 @@ Handle these pages:
 3. Create user form which when submitted
 
 - should be able to create a new user and save it to database
-- take us to new user's details page which has been recently created using create form.
+- take us to new user's details page which has been recently created using create form.////
 
 4. Update user form
 

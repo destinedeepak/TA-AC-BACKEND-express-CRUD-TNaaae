@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section>
+      <h1>Edit user</h1>
+      <form action="/users/<%=user._id%>/update" method="POST">
+        <input
+          type="text"
+          name="name"
+          placeholder="name"
+          class="formEntry"
+          value="<%=user.name%>"
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="email"
+          class="formEntry"
+          value="<%=user.email%>"
+        />
+        <input
+          type="number"
+          name="age"
+          placeholder="age"
+          class="formEntry"
+          value="<%=user.age%>"
+        />
+        <input
+          type="text"
+          name="address"
+          placeholder="address"
+          class="formEntry"
+          value="<%=user.address%>"
+        />
+        <input
+          type="text"
+          name="bio"
+          placeholder="bio"
+          class="formEntry"
+          value="<%=user.bio%>"
+        />
+        <input
+          type="text"
+          name="hobbies"
+          placeholder="add your hobbies in comma-separated"
+          class="formEntry"
+          value="<%=user.hobbies%>"
+        />
+        <input class="button" type="submit" value="Update" />
+      </form>
+    </section>
+  </body>
+</html>
